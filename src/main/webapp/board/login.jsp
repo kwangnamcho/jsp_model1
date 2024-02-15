@@ -18,7 +18,7 @@
 				<ul>
 					<li>
 						<label for="userid">아이디</label>
-						<input type="text" id="userid" name="userid" value="duly">
+						<input type="text" id="userid" name="userid" value="admin">
 					</li>
 					<li>
 						<label for="password">비빌번호</label>

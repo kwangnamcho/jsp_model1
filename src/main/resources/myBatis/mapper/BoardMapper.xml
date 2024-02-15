@@ -6,20 +6,20 @@
 	<cache />
 	
 	<select id="getOne" resultType="bVo">
-		select * from board where seq = #{seq}
+		select * from customerservice where seq = #{seq}
 	</select>	
 		
 	<select id="findAll" resultType="bVo">
-		select * from board order by seq desc
+		select * from customerservice order by seq desc
 	</select>
 
 	<insert id="save" parameterType="bVo">
-		insert into board (userid, title, content, nickname) 
+		insert into customerservice (userid, title, content, nickname) 
 		values (#{userid}, #{title}, #{content}, #{nickname});
 	</insert>
 	
 	<update id="increaseCnt">
-		update board
+		update customerservice
 		<set>
 			<if test="seq!=null">
 				cnt=cnt+1 where seq = #{seq};
@@ -28,15 +28,14 @@
 	</update>
 	
 	<update id="update" parameterType="bVo">
-		update board set 
+		update customerservice set 
 		title = #{title}, 
 		content = #{content} 
 		where seq = #{seq};
 	</update>
 	
 	<delete id="delete" >
-		delete from board where seq = #{seq};	
+		delete from customerservice where seq = #{seq};	
 	</delete>
-	
 	
 </mapper>
